@@ -1,4 +1,5 @@
 using System;
+using BibliotecaAPI.API.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace BibliotecaAPI.API.Contexts
@@ -9,5 +10,6 @@ namespace BibliotecaAPI.API.Contexts
         {
             
         }
+        public DbSet<Autor> Autores { get; set; }
     }
 }
