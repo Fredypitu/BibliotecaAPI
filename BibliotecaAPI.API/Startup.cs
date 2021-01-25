@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using BibliotecaAPI.API.Contexts;
+using BibliotecaAPI.API.Pruebas_Borrar;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -30,6 +31,7 @@ namespace BibliotecaAPI.API
             services.AddControllers();
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("miConnectionString")));
+            services.AddScoped<FucionAnonima>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
